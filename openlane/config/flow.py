@@ -482,6 +482,12 @@ option_variables = [
         deprecated_names=["BASE_SDC_FILE", "SDC_FILE"],
         default=Path(os.path.join(get_script_dir(), "base.sdc")),
     ),
+    Variable(
+        "SYNTH_NO_FLAT",
+        bool,
+        "Enables or disables the flattening of the design during synthesis. Set to True to disable flattening.",
+        pdk=True,
+    ),
 ]
 
 flow_common_variables = pdk_variables + scl_variables + option_variables
