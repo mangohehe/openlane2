@@ -224,7 +224,6 @@ if { $::env(SYNTH_NO_FLAT) } {
 
     file copy -force $::env(SAVE_NETLIST) $::env(STEP_DIR)/$::env(DESIGN_NAME).hierarchy.nl.v
     read_verilog -sv $::env(SAVE_NETLIST)
-    synth -flatten
 
     design -save checkpoint
     run_strategy\
